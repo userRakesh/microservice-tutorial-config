@@ -1,11 +1,13 @@
-  spring:
-    application:
-      name: Config-Prod
-  eureka:
+ spring:
+  application:
+    name: CONFIG-PROD
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
     instance:
-      prefer-ip-address: true
-    client:
-      fetch-registry: true
-      register-with-eureka: true
-      service-url:
-        defaultZone: http://localhost:8761/eureka
+      preferIpAddress: true
